@@ -1,11 +1,59 @@
 <!DOCTYPE html>
 
     <head>
-        <title>corner club</title>
+        <title>corner club | tell me</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
     </head>
 
     <body>  
-    welcome to the corner club.
+
+        <!-- TODO: (1) resizeable image (2) populate links (3) base real cover art (4) add dots -->
+
+        <script>
+            function move_back() {
+              document.getElementById("upload").style.zIndex = "-1";
+            }
+
+            function move_front() {
+                document.getElementById("upload").style.zIndex = "10";
+            }
+        </script>
+        
+        <!-- Cover image -->
+        <div style="text-align: center;">
+            <p>corner club //   <a href="https://www.instagram.com/cornerclubofficial/" class="fa fa-instagram"></a> 
+                                <a href="https://open.spotify.com/artist/3bNfFxC4i5CNV3OMWTj2PJ?si=yNQ9dJpoT1exRSzneFfosQ" class="fa fa-spotify"></a>
+                                <a href="" class="fa fa-apple"></a>
+                                <a href="" class="fa fa-soundcloud"></a>
+                                <a href="" class="fa fa-youtube"></a>
+            </p>    
+            <img src="/img/tell_me_blank.png" alt="Cover Art" class="cover">
+            <p> </p>
+            <button class="button" onclick="move_back()">finito</button>
+            <button class="button" onclick="move_front()">nope</button>
+        </div>
+
+        <!-- Draggable upload -->
+        <div id="upload" class="center">
+            <div id="uploadheader">
+                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none; z-index: -1;"></p>
+                <p><label for="file" style="cursor: pointer;">click</label></p>
+                <p><img id="output" width="200" class="upload"/></p>    
+            </div>
+            
+            <script>
+            var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+            </script>
+        </div>
+        <script src="scripts.js"></script>
+
     </body>
 
 </html>
