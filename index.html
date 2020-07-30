@@ -5,8 +5,16 @@
         <link rel="stylesheet" href="styles.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css"/>
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>     
+        <script src="/js/canvas2image.js"></script>
+        <script> $(function() { $( "#output" ).resizable();}); </script>
+        <script> $(function() { $( "#upload" ).draggable();}); </script>
     </head>
 
     <body>  
@@ -23,9 +31,9 @@
             </p>    
 
             <!-- Draggable upload -->
-            <div id="upload">
-                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none; z-index: 2;"></p>
-                <p><label for="file" class="button">click!</label></p>
+            <div id="upload" style="display: inline-block; padding-left:10%; left: 0;">
+                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none; z-index: 10;"></p>
+                <p style="text-align: left;"><label for="file" class="button">click!</label></p>
                 <p><img id="output" class="upload"></p>
             </div>
 
@@ -40,10 +48,10 @@
         <div style="text-align: right; padding-right: 10%;">
             <button class="button" onclick="move_back()">finito</button>
             <button class="button" onclick="move_front()">nope</button>
+            <button id="save" type="button" class="btn btn-default">save</button>
         </div>
-
     </body>
 
-    <script src="scripts.js"></script>
+    <script src="/js/scripts.js"></script>
     
 </html>
