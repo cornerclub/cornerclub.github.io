@@ -36,11 +36,11 @@ function dragElement(elmnt) {
 }
 
 function move_back() {
-  document.getElementById("upload").style.zIndex = "-1";
+  document.getElementById("upload").style.zIndex = "0";
 }
 
 function move_front() {
-    document.getElementById("upload").style.zIndex = "10";
+    document.getElementById("upload").style.zIndex = "2";
 }
 
 var loadFile = function(event) {
