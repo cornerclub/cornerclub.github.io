@@ -6,27 +6,15 @@ p {
 }
 
 .cover {
-  text-align: center;
   z-index:1;
   width:500px;
-  height:500p;
-}
-
-.green {
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  z-index: -1;
+  height:500px;
 }
 
 .upload {
   z-index: 10;
-  width: 200px;
-  height: 200px;
-  resize: both;
-  overflow: auto;
-  display: inline-block;
+  width: 100px;
+  height: 100px;
 }
 
 #upload {
@@ -65,30 +53,6 @@ p {
   opacity: 0.5;
 }
 
-.btn {
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-
-.btn-default {
-  color: #333;
-  background-color: #fff;
-  border-color: #ccc;
+button:focus {
+  outline-color:#8DBCD4;
 }
