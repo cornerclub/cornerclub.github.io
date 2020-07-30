@@ -2,13 +2,7 @@ dragElement(document.getElementById("upload"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  if (document.getElementById(elmnt.id + "header")) {
-    // if present, the header is where you move the DIV from:
-    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
-    // otherwise, move the DIV from anywhere inside the DIV:
-    elmnt.onmousedown = dragMouseDown;
-  }
+  elmnt.onmousedown = dragMouseDown;
 
   function dragMouseDown(e) {
     e = e || window.event;
@@ -40,3 +34,18 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+
+function move_back() {
+  document.getElementById("upload").style.zIndex = "-1";
+}
+
+function move_front() {
+    document.getElementById("upload").style.zIndex = "10";
+}
+
+var loadFile = function(event) {
+    var image = document.getElementById('output');
+    image.src = URL.createObjectURL(event.target.files[0]);
+    image.style.resize="both";
+    image.style.overflow = auto;
+};

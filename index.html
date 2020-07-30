@@ -11,17 +11,7 @@
 
     <body>  
 
-        <!-- TODO: (1) resizeable image (2) populate links (3) base real cover art (4) add dots -->
-
-        <script>
-            function move_back() {
-              document.getElementById("upload").style.zIndex = "-1";
-            }
-
-            function move_front() {
-                document.getElementById("upload").style.zIndex = "10";
-            }
-        </script>
+        <!-- TODO: (1) Populate links (2) add dots (3) fix layering -->
         
         <!-- Cover image -->
         <div style="text-align: center;">
@@ -31,29 +21,35 @@
                                 <a href="" class="fa fa-soundcloud"></a>
                                 <a href="" class="fa fa-youtube"></a>
             </p>    
-            <img src="/img/tell_me_blank.png" alt="Cover Art" class="cover">
-            <p> </p>
+
+            <!-- Draggable upload -->
+            <div id="upload">
+                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none; z-index: -1;"></p>
+                <p><label for="file" class="button">click!</label></p>
+                <p><img id="output" class="upload"></p>
+            </div>
+
+            <!-- Cover image -->
+            <img src="/img/tell_me_blank.png" alt="Cover Blank" class="cover" style="position: relative; text-align: center;">
+            <span>
+                <img src="/img/tell_me.png" alt="Cover" class="cover" style="position: absolute;
+                margin-left: auto;
+                margin-right: auto;
+                left: 0;
+                right: 0;
+                text-align: center;
+                z-index: -1;">    
+            </span>
+
+        </div>
+
+        <div style="text-align: right; padding-right: 100px;">
             <button class="button" onclick="move_back()">finito</button>
             <button class="button" onclick="move_front()">nope</button>
         </div>
 
-        <!-- Draggable upload -->
-        <div id="upload" class="center">
-            <div id="uploadheader">
-                <p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none; z-index: -1;"></p>
-                <p><label for="file" style="cursor: pointer;">click</label></p>
-                <p><img id="output" width="200" class="upload"/></p>    
-            </div>
-            
-            <script>
-            var loadFile = function(event) {
-                var image = document.getElementById('output');
-                image.src = URL.createObjectURL(event.target.files[0]);
-            };
-            </script>
-        </div>
-        <script src="scripts.js"></script>
-
     </body>
 
+    <script src="scripts.js"></script>
+    
 </html>
