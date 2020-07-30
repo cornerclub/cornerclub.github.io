@@ -11,12 +11,6 @@ p {
   height:500px;
 }
 
-.upload {
-  z-index: 10;
-  width: 100px;
-  height: 100px;
-}
-
 #upload {
   position: absolute;
   z-index: 10;
