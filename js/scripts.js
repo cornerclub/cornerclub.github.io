@@ -15,11 +15,3 @@ var loadFile = function(event) {
     image.style.height = "200px";
     $(function() { $( "#output" ).resizable();}); 
 };
-
-// document.querySelector('#save').addEventListener('click', function() {
-//   html2canvas(document.querySelectorAll('.cover'), {
-//       onrendered: function(canvas) {
-//         return Canvas2Image.saveAsPNG(canvas);
-//       }
-//   });
-// });
