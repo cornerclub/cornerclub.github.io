@@ -13,21 +13,29 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-alpha1/html2canvas.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>     
         <script src="/js/canvas2image.js"></script>
-        <script src="/js/scripts.js"></script>
     </head>
 
     <body>  
 
-        <!-- TODO: (1) Populate links (2) add dots (3) save button -->
+        <!-- TODO: (1) Add dots (2) save button -->
         
         <!-- Cover image -->
         <div style="text-align: center;">
-            <p>corner club //   <a href="https://www.instagram.com/cornerclubofficial/" class="fa fa-instagram"></a> 
-                                <a href="https://open.spotify.com/artist/3bNfFxC4i5CNV3OMWTj2PJ?si=yNQ9dJpoT1exRSzneFfosQ" class="fa fa-spotify"></a>
-                                <a href="" class="fa fa-apple"></a>
-                                <a href="" class="fa fa-soundcloud"></a>
-                                <a href="" class="fa fa-youtube"></a>
+            <p>corner club      <a href="https://www.instagram.com/cornerclubofficial/" class="fa fa-instagram"></a> 
+                               //
+                                <a href="https://open.spotify.com/track/5CevWcwisjbbR9ivUbmt04?si=9FA9259ERxuEZX8rj2o4JQ" class="fa fa-spotify"></a>
+                                <a href="https://music.apple.com/us/album/tell-me-single/1526215261" class="fa fa-apple"></a>
+                                <a href="https://soundcloud.com/cornerclubofficial/tell-me" class="fa fa-soundcloud"></a>
+                                <a href="https://www.youtube.com/watch?v=pZ45_QNWcKU" class="fa fa-youtube"></a>
+                                <a href="https://cornerclubofficial.bandcamp.com/track/tell-me" class="fa fa-bandcamp"></a>
             </p>    
+
+            <!-- Cover image -->
+            <!-- TODO limit uplaod image to cover area -->
+            <img src="/img/tell_me_blank.png" alt="Cover Blank" class="cover" style="position: relative;">
+            <span>
+                <img src="/img/tell_me.png" id="cover" alt="Cover" class="cover" style="position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; z-index: -1;">    
+            </span>
 
             <!-- Draggable upload -->
             <div id="upload" style="display: inline-block; padding-left:10%; left: 0;">
@@ -36,22 +44,20 @@
                 <p><img id="output"></p>
             </div>
 
-            <!-- Cover image -->
-            <img src="/img/tell_me_blank.png" alt="Cover Blank" class="cover" style="position: relative;">
-            <span>
-                <img src="/img/tell_me.png" alt="Cover" class="cover" style="position: absolute; margin-left: auto; margin-right: auto; left: 0; right: 0; z-index: -1;">    
-            </span>
-
         </div>
-
+        
         <!-- Buttons -->
+        <!-- TOOD Combine swap and nope button functionality -->
+        <!-- TODO Fix save button -->
         <div style="text-align: right; padding-right: 10%;">
-            <button class="button" onclick="move_back()">finito</button>
+            <button class="button" onclick="move_back()">swap</button>
             <button class="button" onclick="move_front()">nope</button>
-            <!-- <button id="save" type="button" class="button">~save~</button> -->
+            <button id="save" type="button" class="button">~save~</button>
         </div>
 
         <script src="/js/save.js"></script>
+        <script src="/js/scripts.js"></script>
+
     </body>
     
 </html>

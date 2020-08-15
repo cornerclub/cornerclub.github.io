@@ -14,4 +14,7 @@ var loadFile = function(event) {
     image.style.width = "130px";
     image.style.height = "200px";
     $(function() { $( "#output" ).resizable();}); 
+
+    var cover = document.getElementById('cover');
+    cover.parentNode.removeChild(cover);
 };
