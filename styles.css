@@ -1,0 +1,52 @@
+p {
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  font-size: small;
+  font-weight: bold;
+}
+
+.cover {
+  z-index:1;
+  width:500px;
+  height:500px;
+}
+
+#upload {
+  position: absolute;
+  z-index: 10;
+  padding: 10px;
+  cursor: move;
+}
+
+.fa {
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: white;
+  color: black;
+}
+
+.fa:hover {
+  opacity: 0.5;
+}
+
+.button {
+  background-color: white;
+  border: none;
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Quicksand";
+  letter-spacing: 2px;
+  font-size: small;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.button:hover {
+  opacity: 0.5;
+}
+
+button:focus {
+  outline-color:#8DBCD4;
+}
