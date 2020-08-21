@@ -2,7 +2,7 @@ p {
   font-family: 'Quicksand', sans-serif;
   letter-spacing: 2px;
   font-size: small;
-  /* font-weight: bold; */
+  font-weight: 700;
 }
 
 .cover {
