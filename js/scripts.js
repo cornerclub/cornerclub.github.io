@@ -4,7 +4,16 @@ img_pos = "0"
 
 function swap() {
   document.getElementById("upload").style.zIndex = img_pos;
-  if (img_pos == "0") {img_pos = "2"} else {img_pos = "0"}
+  if (img_pos == "0") {
+    img_pos = "2"
+    $("#click").css('color', 'white');
+  } 
+  else {
+    img_pos = "0"
+    $("#click").css('color', 'black');
+  }
+
+  
 }
 
 var loadFile = function(event) {
