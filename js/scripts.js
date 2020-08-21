@@ -1,11 +1,10 @@
 $(function() { $( "#upload" ).draggable();});
 
-function move_back() {
-  document.getElementById("upload").style.zIndex = "0";
-}
+img_pos = "0"
 
-function move_front() {
-    document.getElementById("upload").style.zIndex = "2";
+function swap() {
+  document.getElementById("upload").style.zIndex = img_pos;
+  if (img_pos == "0") {img_pos = "2"} else {img_pos = "0"}
 }
 
 var loadFile = function(event) {
